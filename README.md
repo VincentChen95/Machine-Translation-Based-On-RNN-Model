@@ -4,16 +4,13 @@
 - **Preprocess** - I'll convert text to sequence of integers.
 - **Models** Create models which accepts a sequence of integers as input and returns a probability distribution over possible translations. After learning about the basic types of neural networks that are often used for machine translation, you will engage in your own investigations, to design your own model!
 - **Prediction** Run the model on English text.
-
 ## Dataset
 <br/>We begin by investigating the dataset that will be used to train and evaluate the pipeline.  The most common datasets used for machine translation are from [WMT](http://www.statmt.org/).  However, that will take a long time to train a neural network on.  We'll be using a dataset we created for this project that contains a small vocabulary.  We'll be able to train our model in a reasonable time with this dataset.
 <br/>For comparison, _Alice's Adventures in Wonderland_ contains 2,766 unique words of a total of 15,500 words.
-
 ## Preprocess
 <br/>For this project, we won't use text data as input to our model. Instead, we'll convert the text into sequences of integers using the following preprocess methods:
 <br/>1. Tokenize the words into ids
 <br/>2. Add padding to make all the sequences the same length.
-
 ### Tokenize
 <br/>For a neural network to predict on text data, it first has to be turned into data it can understand. Text data like "dog" is a sequence of ASCII character encodings.  Since a neural network is a series of multiplication and addition operations, the input data needs to be number(s).
 <br/>We can turn each character into a number or each word into a number.  These are called character and word ids, respectively.  Character ids are used for character level models that generate text predictions for each character.  A word level model uses word ids that generate text predictions for each word.  Word level models tend to learn better, since they are lower in complexity, so we'll use those.
