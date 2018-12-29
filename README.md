@@ -44,3 +44,6 @@ I will begin by training four relatively simple architectures.
 
 ### Model 4: Encoder-Decoder
 Time to look at encoder-decoder models.  This model is made up of an encoder and decoder. The encoder creates a matrix representation of the sentence.  The decoder takes this matrix as input and predicts the translation as output.
+
+## Results
+<br/>Finally, our model achieved 93.48% accuracy. In this model, we added embedding layer, bidirectional RNN, encoding layer, and decoding layer. So in this project, I showed how to use Keras to design a RNN model for machine learning. Please let me know, if you have any questions.
