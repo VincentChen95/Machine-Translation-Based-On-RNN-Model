@@ -30,20 +30,17 @@ I will begin by training four relatively simple architectures.
 - Model 4 is an optional Encoder-Decoder RNN
 <br/>After experimenting with the four simple architectures, I will construct a deeper architecture that is designed to outperform all four models.
 
-### Ids Back to Text
-The neural network will be translating the input to words ids, which isn't the final form we want.  We want the French translation.  The function `logits_to_text` will bridge the gab between the logits from the neural network to the French translation.  You'll be using this function to better understand the output of the neural network.
-
 ### Model 1: RNN
 ![RNN](images/rnn.png)
-A basic RNN model is a good baseline for sequence data.
+<br/>A basic RNN model is a good baseline for sequence data.
 
 ### Model 2: Embedding
 ![RNN](images/embedding.png)
-You've turned the words into ids, but there's a better representation of a word.  This is called word embeddings.  An embedding is a vector representation of the word that is close to similar words in n-dimensional space, where the n represents the size of the embedding vectors.
+<br/>You've turned the words into ids, but there's a better representation of a word.  This is called word embeddings.  An embedding is a vector representation of the word that is close to similar words in n-dimensional space, where the n represents the size of the embedding vectors.
 
 ### Model 3: Bidirectional RNNs
 ![RNN](images/bidirectional.png)
-One restriction of a RNN is that it can't see the future input, only the past.  This is where bidirectional recurrent neural networks come in.  They are able to see the future data.
+<br/>One restriction of a RNN is that it can't see the future input, only the past.  This is where bidirectional recurrent neural networks come in.  They are able to see the future data.
 
 ### Model 4: Encoder-Decoder
 Time to look at encoder-decoder models.  This model is made up of an encoder and decoder. The encoder creates a matrix representation of the sentence.  The decoder takes this matrix as input and predicts the translation as output.
